@@ -21,7 +21,7 @@ class MyComponent extends React.Component {
     );
   }
 }
-
+```
 
 To do some calculations and then navigate to a new page in React Router v6, you can use the useNavigate hook inside a function that does the calculation and then calls the navigate function with the path of the new page.
 
