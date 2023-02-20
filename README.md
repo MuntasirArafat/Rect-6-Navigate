@@ -48,3 +48,30 @@ class MyComponent extends React.Component {
     );
   }
 }
+```
+
+To do some calculations and then navigate to a new page in React Router v6 when a button is clicked without creating any additional functions, you can use the useNavigate hook inside the onClick event of the button to navigate to the new page with the result as a parameter.
+
+
+```javascript
+import { useNavigate } from 'react-router-dom';
+
+class MyComponent extends React.Component {
+  handleClick = () => {
+    const num1 = 3;
+    const num2 = 5;
+    const result = num1 + num2; // do some calculation
+
+    const navigate = useNavigate(); // use the useNavigate hook to get the navigate function
+    navigate(`/result-page/${result}`); // navigate to the result page with the result as a parameter
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick}>Calculate and go to result page</button>
+      </div>
+    );
+  }
+}
+```
